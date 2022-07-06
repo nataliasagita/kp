@@ -93,7 +93,7 @@ include '../jumlah_data.php';
         <div class="sidebar">
             <div class="scrollbar-inner sidebar-wrapper">
                 <ul class="nav">
-                <li class="nav-item">
+                    <li class="nav-item">
 						<a href="../../../examples/index.html">
 							<i class="la la-dashboard"></i>
 							<p>Dashboard</p>
