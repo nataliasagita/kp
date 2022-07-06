@@ -109,103 +109,35 @@ while ($data = mysqli_fetch_array($hasil)) {
             <div class="scrollbar-inner sidebar-wrapper">
                 <ul class="nav">
                     <li class="nav-item">
-                        <a href="index.html">
-                            <i class="la la-dashboard"></i>
-                            <p>Dashboard</p>
-                            <!-- <span class="badge badge-count">5</span> -->
-                        </a>
-                    </li>
-                    <li class="nav-item collapse">
-                        <a class="collapse-toggle" data-toggle="collapse" href="#collapseDokumen" aria-expanded="true">
-                            <i class="la la-file-text"></i>
-                            <p>Dokumen</p>
-                            <span class="badge">
-                                <span class="la la-caret-down"></span>
-                            </span>
-                        </a>
-                        <div class="collapse in" id="collapseDokumen" aria-expanded="true">
-                            <a href="data_stk.php" class="active bg-active">
-                                &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-                                <span class="la la-caret-right"></span>
-                                &nbsp;
-                                <span>STK</span>
-                                <span class="badge badge-success">23562</span>
-                            </a>
-                            <a href="../iso/data_iso.php">
-                                &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-                                <span class="la la-caret-right"></span>
-                                &nbsp;
-                                <span>ISO</span>
-                                <span class="badge badge-success">1562</span>
-                            </a>
-                            <a href="../surat-perintah/data_sp.php">
-                                &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-                                <span class="la la-caret-right"></span>
-                                &nbsp;
-                                <span>Surat Perintah</span>
-                                <span class="badge badge-success">362</span>
-                            </a>
-                            <a href="../surat-keputusan/data_sk.php">
-                                &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-                                <span class="la la-caret-right"></span>
-                                &nbsp;
-                                <span>Surat Keputusan</span>
-                                <span class="badge badge-success">17</span>
-                            </a>
-                            <a href="../kebijakan/kebijakan.php">
-                                &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-                                <span class="la la-caret-right"></span>
-                                &nbsp;
-                                <span>Kebijakan</span>
-                                <span class="badge badge-success">17</span>
-                            </a>
-                            <a href="../rtm/data_rtm.php">
-                                &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-                                <span class="la la-caret-right"></span>
-                                &nbsp;
-                                <span>RTM</span>
-                                <span class="badge badge-success">17</span>
-                            </a>
-                            <a href="../cip/data_cip.php">
-                                &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-                                <span class="la la-caret-right"></span>
-                                &nbsp;
-                                <span>CIP</span>
-                                <span class="badge badge-success">17</span>
-                            </a>
-                            <a href="../komet/data_komet.php">
-                                &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-                                <span class="la la-caret-right"></span>
-                                &nbsp;
-                                <span>KOMET</span>
-                                <span class="badge badge-success">17</span>
-                            </a>
-                        </div>
-                    </li>
-
-                    <li class="nav-item collapse">
-                        <a class="collapse-toggle" data-toggle="collapse" href="#collapseSetup" aria-expanded="true">
-                            <i class="la la-cogs"></i>
-                            <p>Setup</p>
-                            <span class="badge">
-                                <span class="la la-caret-down"></span>
-                            </span>
-                        </a>
-                        <div class="collapse in" id="collapseSetup" aria-expanded="true">
-                            <a href="#">
-                                &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-                                <span class="la la-caret-right"></span>
-                                &nbsp;
-                                <span>Bagian</span>
-                            </a>
-                            <a href="#">
-                                &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-                                <span class="la la-caret-right"></span>
-                                &nbsp;
-                                <span>Jenis Dokumen</span>
-                            </a>
-                        </div>
-                    </li>
+						<a href="../../../examples/index.html">
+							<i class="la la-dashboard"></i>
+							<p>Dashboard</p>
+						</a>
+					</li>
+					<li class="nav-item">
+						<a href="tambah.php">
+							<i class="la la-keyboard-o"></i>
+							<p>Forms</p>
+						</a>
+					</li>
+					<li class="nav-item">
+						<a href="typography.html">
+							<i class="la la-edit"></i>
+							<p>Tambah Catatan</p>
+						</a>
+					</li>
+					<li class="nav-item active bg-active">
+						<a href="data_stk.php">
+							<i class="la la-book"></i>
+							<p>Buku Surat Masuk</p>
+						</a>
+					</li>
+					<li class="nav-item">
+						<a href="../pages/admin/stk/data_stk.php">
+							<i class="la la-file-o"></i>
+							<p>Lembar Disposisi</p>
+						</a>
+					</li>
                 </ul>
             </div>
         </div>
