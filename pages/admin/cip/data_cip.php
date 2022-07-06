@@ -243,7 +243,7 @@
                                                         <a href="" class="btn btn-primary p-1 mr-1 mb-1">
                                                             <i class="la la-info-circle"></i>
                                                         </a>
-                                                        <a href="" class="btn btn-warning p-1 mr-1 mb-1">
+                                                        <a href="edit.php?id_cip=<?= $data["id_cip"]; ?>" class="btn btn-warning p-1 mr-1 mb-1">
                                                             <i class="la la-edit"></i>
                                                         </a>
                                                         <a href="" class="btn btn-danger p-1 mr-1 mb-1">
