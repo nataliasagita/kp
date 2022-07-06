@@ -42,7 +42,7 @@ while ($data = mysqli_fetch_array($hasil)) {
             <div class="logo-header">
                 <a href="../index.php" class="logo">
                     &nbsp;
-                    <img src="../../../assets/img/logo teks.png" alt="" width="160px">
+                    <img src="../../../assets/img/logo teks.png" alt="" width="150px" height="50px">
                 </a>
                 <button class="navbar-toggler sidenav-toggler ml-auto" type="button" data-toggle="collapse" data-target="collapse" aria-controls="sidebar" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
