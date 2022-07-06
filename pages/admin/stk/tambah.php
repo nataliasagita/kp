@@ -99,13 +99,13 @@ include '../../../koneksi.php';
 						</a>
 					</li>
 					<li class="nav-item active bg-active">
-						<a href="../pages/admin/stk/tambah.php">
+						<a href="#">
 							<i class="la la-keyboard-o"></i>
 							<p>Forms</p>
 						</a>
 					</li>
 					<li class="nav-item">
-						<a href="typography.html">
+						<a href="../surat-keputusan/tambah.php">
 							<i class="la la-edit"></i>
 							<p>Tambah Catatan</p>
 						</a>
@@ -117,7 +117,7 @@ include '../../../koneksi.php';
 						</a>
 					</li>
 					<li class="nav-item">
-						<a href="../pages/admin/stk/data_stk.php">
+						<a href="../surat-keputusan/data_sk.php">
 							<i class="la la-file-o"></i>
 							<p>Lembar Disposisi</p>
 						</a>
