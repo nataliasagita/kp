@@ -23,7 +23,7 @@ while ($data = mysqli_fetch_array($hasil)) {
 
 <head>
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-    <title>Detail STK | E-Arsip - QM Pertamina RU III</title>
+    <title>E-Book Disposisi</title>
     <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no' name='viewport' />
     <link rel="stylesheet" href="../../../assets/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i">
@@ -31,7 +31,7 @@ while ($data = mysqli_fetch_array($hasil)) {
     <link rel="stylesheet" href="../../../assets/css/demo.css">
     <link rel="stylesheet" href="../../../assets/css/costum.css">
     <link rel="stylesheet" href="//cdn.datatables.net/1.11.1/css/jquery.dataTables.min.css">
-    <link rel="icon" href="../../../assets/img/logo-pertamina.png">
+    <link rel="icon" href="../../../assets/img/logo.png">
     <link rel="stylesheet" href="../../../datatables.min.css">
     <link rel="stylesheet" href="../../../assets/bootstrap-datepicker/css/bootstrap-datepicker.min.css">
 </head>
@@ -42,7 +42,7 @@ while ($data = mysqli_fetch_array($hasil)) {
             <div class="logo-header">
                 <a href="../index.php" class="logo">
                     &nbsp;
-                    <img src="../../../assets/img/logo-pertamina-teks.png" alt="" width="160px">
+                    <img src="../../../assets/img/logo teks.png" alt="" width="160px">
                 </a>
                 <button class="navbar-toggler sidenav-toggler ml-auto" type="button" data-toggle="collapse" data-target="collapse" aria-controls="sidebar" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
