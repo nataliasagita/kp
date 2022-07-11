@@ -152,6 +152,7 @@ include '../jumlah_data.php';
                                                     <th>Tanggal Diterima</th>
                                                     <th>Tanggal Surat</th>
                                                     <th>Keterangan</th>
+                                                    <th>Disposisi</th>
                                                     <th>Aksi</th>
                                                 </tr>
                                             </thead>
