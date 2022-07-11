@@ -144,7 +144,7 @@ include '../../../koneksi.php';
                                     <form action="proses_tambah.php" method="POST" enctype="multipart/form-data">
                                         <input type="hidden" value="<?php echo $data['id_stk']; ?>" name="id_stk">
                                         <div class="form-group form-inline">
-                                            <label for="bagian" class="col-md-2 col-form-label">Bagian</label>
+                                            <label for="bagian" class="col-md-2 col-form-label">No Urut</label>
                                             <div class="col-md-10 p-0">
                                                 <select class="form-control" id="bagian" name="bagian" required>
                                                     <?php
@@ -157,7 +157,7 @@ include '../../../koneksi.php';
                                             </div>
                                         </div>
                                         <div class="form-group form-inline">
-                                            <label for="jenis" class="col-md-2 col-form-label">Jenis</label>
+                                            <label for="jenis" class="col-md-2 col-form-label">Nomor Surat</label>
                                             <div class="col-md-9 p-0">
                                                 <select class="form-control" id="jenis" name="jenis" required>
                                                     <option value="Pedoman">Pedoman</option>
@@ -168,7 +168,7 @@ include '../../../koneksi.php';
                                             </div>
                                         </div>
                                         <div class="form-group form-inline">
-                                            <label for="kategori" class="col-md-2 col-form-label">Kategori</label>
+                                            <label for="kategori" class="col-md-2 col-form-label">Asal Surat</label>
                                             <div class="col-md-10 p-0">
                                                 <select class="form-control" id="kategori" name="kategori" required>
                                                     <option value="Normal">Normal</option>
@@ -177,18 +177,18 @@ include '../../../koneksi.php';
                                             </div>
                                         </div>
                                         <div class="form-group form-inline">
-                                            <label for="no_dokumen" class="col-md-2 col-form-label">No Dokumen</label>
+                                            <label for="no_dokumen" class="col-md-2 col-form-label">Tanggal Diterima</label>
                                             <div class="col-md-10 p-0">
                                                 <input type="text" class="form-control input-full" id="no_dokumen" name="no_dokumen" required>
                                             </div>
                                         </div>
                                         <div class="form-group form-inline">
-                                            <label for="judul" class="col-md-2 col-form-label">Judul</label>
+                                            <label for="judul" class="col-md-2 col-form-label">Tanggal Surat</label>
                                             <div class="col-md-10 p-0">
                                                 <input type="text" class="form-control input-full" id="judul" name="judul" required>
                                             </div>
                                         </div>
-                                        <div class="form-group form-inline">
+                                        <div class="form-group form-inline"> <!-- -->
                                             <label for="revisi" class="col-md-2 col-form-label">Revisi</label>
                                             <div class="col-md-10 p-0">
                                                 <input type="number" class="form-control input-full" id="revisi" name="revisi" required>
@@ -200,7 +200,7 @@ include '../../../koneksi.php';
                                                 <input type="text" class="form-control input-full datepicker" id="tmt_berlaku" name="tmt_berlaku" required>
                                                 <small id="" class="form-text text-muted">Tanggal kadaluarsa akan diinput otomatis dari TMT berlaku</small>
                                             </div>
-                                        </div>
+                                        </div> <!-- -->
                                         <div class="form-group form-inline">
                                             <label for="keterangan" class="col-md-2 col-form-label">Keterangan</label>
                                             <div class="col-md-10 p-0">
