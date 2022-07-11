@@ -143,37 +143,17 @@ include '../../../koneksi.php';
                                 <div class="card-body">
                                     <form action="proses_tambah.php" method="POST" enctype="multipart/form-data">
                                         <input type="hidden" value="<?php echo $data['id_stk']; ?>" name="id_stk">
-                                        <div class="form-group form-inline">
-                                            <label for="bagian" class="col-md-2 col-form-label">No Urut</label>
-                                            <div class="col-md-10 p-0">
-                                                <select class="form-control" id="bagian" name="bagian" required>
-                                                    <?php
-                                                    $sql = mysqli_query($koneksi, "SELECT*FROM tb_bagian");
-                                                    while ($data = mysqli_fetch_array($sql)) {
-                                                    ?>
-                                                        <option value="<?= $data['nama_bagian']; ?>"><?= $data['nama_bagian']; ?></option>
-                                                    <?php } ?>
-                                                </select>
-                                            </div>
                                         </div>
                                         <div class="form-group form-inline">
                                             <label for="jenis" class="col-md-2 col-form-label">Nomor Surat</label>
                                             <div class="col-md-9 p-0">
-                                                <select class="form-control" id="jenis" name="jenis" required>
-                                                    <option value="Pedoman">Pedoman</option>
-                                                    <option value="TKO">TKO</option>
-                                                    <option value="TKI">TKI</option>
-                                                    <option value="TKPA">TKPA</option>
-                                                </select>
+                                                <input class="form-control" id="jenis" name="jenis" required>
                                             </div>
                                         </div>
                                         <div class="form-group form-inline">
                                             <label for="kategori" class="col-md-2 col-form-label">Asal Surat</label>
                                             <div class="col-md-10 p-0">
-                                                <select class="form-control" id="kategori" name="kategori" required>
-                                                    <option value="Normal">Normal</option>
-                                                    <option value="Critical">Critical</option>
-                                                </select>
+                                                <input class="form-control" id="kategori" name="kategori" required>
                                             </div>
                                         </div>
                                         <div class="form-group form-inline">
