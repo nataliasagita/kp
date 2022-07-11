@@ -131,7 +131,7 @@ include '../jumlah_data.php';
                 <div class="container-fluid">
                     <div class="row page-title">
                         <div class="col-md-6 col-8 align-self-center">
-                            <h4 class="page-title font-weight-bold">Data STK</h4>
+                            <h4 class="page-title font-weight-bold">Data Surat Masuk</h4>
                         </div>
                         <div class="col-md-6 col-4 align-self-center">
                             <a href="tambah.php" class="btn btn-sm pull-right btn-primary"><i class="la la-plus font-weight-bold"></i> &nbsp;Tambah Dokumen</a>
