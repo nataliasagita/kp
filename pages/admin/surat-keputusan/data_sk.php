@@ -8,7 +8,7 @@ include '../jumlah_data.php';
 
 <head>
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-    <title>Surat Keputusan | E-Book Disposisi</title>
+    <title>E-Book Disposisi</title>
     <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no' name='viewport' />
     <link rel="stylesheet" href="../../../assets/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i">
@@ -131,7 +131,7 @@ include '../jumlah_data.php';
                 <div class="container-fluid">
                     <div class="row page-title">
                         <div class="col-md-6 col-8 align-self-center">
-                            <h4 class="page-title font-weight-bold">Data Surat Keputusan</h4>
+                            <h4 class="page-title font-weight-bold">Data Surat Masuk</h4>
                         </div>
                         <div class="col-md-6 col-4 align-self-center">
                             <a href="tambah.php" class="btn btn-sm pull-right btn-primary"><i class="la la-plus font-weight-bold"></i> &nbsp;Tambah Dokumen</a>
@@ -146,12 +146,12 @@ include '../jumlah_data.php';
                                         <table class="table table-striped table-bordered table-hover" id="tabelDokumen">
                                             <thead class="font-weight-bold">
                                                 <tr>
-                                                    <th>No</th>
+                                                    <th>No Urut</th>
                                                     <th>No Surat</th>
-                                                    <th>Tentang</th>
-                                                    <th>User</th>
-                                                    <th>TMT Berlaku</th>
-                                                    <th>Berakhir</th>
+                                                    <th>Asal Surat</th>
+                                                    <th>Tanggal Diterima</th>
+                                                    <th>Tanggal Surat</th>
+                                                    <th>Keterangan</th>
                                                     <th>Aksi</th>
                                                 </tr>
                                             </thead>
