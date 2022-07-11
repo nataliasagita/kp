@@ -146,13 +146,12 @@ include '../jumlah_data.php';
                                         <table class="table table-striped table-bordered table-hover" id="tabelDokumen">
                                             <thead class="font-weight-bold">
                                                 <tr>
-                                                    <th>No</th>
-                                                    <th>Bagian</th>
-                                                    <th>Jenis</th>
-                                                    <th>No Dokumen</th>
-                                                    <th>Judul</th>
-                                                    <th>TMT Berlaku</th>
-                                                    <th>Kadaluarsa</th>
+                                                    <th>No Urut</th>
+                                                    <th>No Surat</th>
+                                                    <th>Asal Surat</th>
+                                                    <th>Tanggal Diterima</th>
+                                                    <th>Tanggal Surat</th>
+                                                    <th>Keterangan</th>
                                                     <th>Aksi</th>
                                                 </tr>
                                             </thead>
