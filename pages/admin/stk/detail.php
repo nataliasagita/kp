@@ -4,17 +4,12 @@ include '../../../koneksi.php';
 $id_stk = $_GET['id_stk'];
 $hasil = mysqli_query($koneksi, "SELECT*FROM tb_stk WHERE id_stk='$id_stk'");
 while ($data = mysqli_fetch_array($hasil)) {
-    $bagian = $data['bagian'];
     $jenis = $data['jenis'];
     $kategori = $data['kategori'];
     $no_dokumen = $data['no_dokumen'];
     $judul = $data['judul'];
-    $revisi = $data['revisi'];
-    $tmt_berlaku = $data['tmt_berlaku'];
-    $kadaluarsa = $data['kadaluarsa'];
     $keterangan = $data['keterangan'];
     $file_pdf = $data['file_pdf'];
-    $file_word = $data['file_word'];
 }
 ?>
 
@@ -159,40 +154,20 @@ while ($data = mysqli_fetch_array($hasil)) {
                                 <div class="card-body">
                                     <form action="proses_edit.php" method="POST" enctype="multipart/form-data">
                                         <div class="form-group form-inline">
-                                            <label for="bagian" class="col-md-2 col-form-label">Bagian</label>
-                                            <label for="" class="col-form-label">: &nbsp; <?= $bagian; ?></label>
-                                        </div>
-                                        <div class="form-group form-inline">
-                                            <label for="no_dokumen" class="col-md-2 col-form-label">No Dokumen</label>
-                                            <label for="" class="col-form-label">: &nbsp; <?= $no_dokumen; ?></label>
-                                        </div>
-                                        <div class="form-group form-inline">
-                                            <label for="jenis" class="col-md-2 col-form-label">Jenis</label>
+                                            <label for="no_dokumen" class="col-md-2 col-form-label">Nomor Surat</label>
                                             <label for="" class="col-form-label">: &nbsp; <?= $jenis; ?></label>
                                         </div>
                                         <div class="form-group form-inline">
-                                            <label for="kategori" class="col-md-2 col-form-label">Kategori</label>
+                                            <label for="kategori" class="col-md-2 col-form-label">Asal Surat</label>
                                             <label for="" class="col-form-label">: &nbsp; <?= $kategori; ?></label>
                                         </div>
                                         <div class="form-group form-inline">
-                                            <label for="no_dokumen" class="col-md-2 col-form-label">No Dokumen</label>
+                                            <label for="no_dokumen" class="col-md-2 col-form-label">Tanggal Diterima</label>
                                             <label for="" class="col-form-label">: &nbsp; <?= $no_dokumen; ?></label>
                                         </div>
                                         <div class="form-group form-inline">
-                                            <label for="judul" class="col-md-2 col-form-label">Judul</label>
+                                            <label for="judul" class="col-md-2 col-form-label">Tanggal Surat</label>
                                             <label for="" class="col-form-label">: &nbsp; <?= $judul; ?></label>
-                                        </div>
-                                        <div class="form-group form-inline">
-                                            <label for="revisi" class="col-md-2 col-form-label">Revisi</label>
-                                            <label for="" class="col-form-label">: &nbsp; <?= $revisi; ?></label>
-                                        </div>
-                                        <div class="form-group form-inline">
-                                            <label for="tmt_berlaku" class="col-md-2 col-form-label">TMT Berlaku</label>
-                                            <label for="" class="col-form-label">: &nbsp; <?= $tmt_berlaku; ?></label>
-                                        </div>
-                                        <div class="form-group form-inline">
-                                            <label for="kadaluarsa" class="col-md-2 col-form-label">Kadaluarsa</label>
-                                            <label for="" class="col-form-label">: &nbsp; <?= $kadaluarsa; ?></label>
                                         </div>
                                         <div class="form-group form-inline">
                                             <label for="keterangan" class="col-md-2 col-form-label">Keterangan</label>
@@ -201,10 +176,6 @@ while ($data = mysqli_fetch_array($hasil)) {
                                         <div class="form-group form-inline">
                                             <label for="file_pdf" class="col-md-2 col-form-label">File PDF</label>
                                             <a href="download_pdf.php?id_stk=<?= $id_stk; ?>" target="_blank">: &nbsp; <i class="la la-file-pdf-o"></i> <?= $file_pdf; ?></a>
-                                        </div>
-                                        <div class="form-group form-inline">
-                                            <label for="file_word" class="col-md-2 col-form-label">File DOC</label>
-                                            <a href="download_word.php?id_stk=<?= $id_stk; ?>" target="_blank">: &nbsp; <i class="la la-file-word-o"></i> <?= $file_word; ?></a>
                                         </div>
 
                                         <div class="form-group row float-right">
