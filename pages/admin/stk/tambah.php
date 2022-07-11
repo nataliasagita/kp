@@ -179,13 +179,13 @@ include '../../../koneksi.php';
                                         <div class="form-group form-inline">
                                             <label for="no_dokumen" class="col-md-2 col-form-label">Tanggal Diterima</label>
                                             <div class="col-md-10 p-0">
-                                                <input type="text" class="form-control input-full" id="no_dokumen" name="no_dokumen" required>
+                                                <input type="text" class="form-control input-full datepicker" id="no_dokumen" name="no_dokumen" required>
                                             </div>
                                         </div>
                                         <div class="form-group form-inline">
                                             <label for="judul" class="col-md-2 col-form-label">Tanggal Surat</label>
                                             <div class="col-md-10 p-0">
-                                                <input type="text" class="form-control input-full" id="judul" name="judul" required>
+                                                <input type="text" class="form-control input-full datepicker" id="judul" name="judul" required>
                                             </div>
                                         </div>
                                         <div class="form-group form-inline"> <!-- -->
