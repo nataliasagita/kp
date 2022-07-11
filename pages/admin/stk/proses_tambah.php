@@ -29,18 +29,10 @@
 <?php
 include '../../../koneksi.php';
 
-$bagian = $_POST['bagian'];
 $jenis = $_POST['jenis'];
 $kategori = $_POST['kategori'];
 $no_dokumen = $_POST['no_dokumen'];
 $judul = $_POST['judul'];
-$revisi = $_POST['revisi'];
-$tmt_berlaku = $_POST['tmt_berlaku'];
-
-//kadaluarsa
-$timestamp = strtotime($tmt_berlaku);
-$kadaluarsa = date('Y-m-d', strtotime('+3 years', $timestamp));
-
 $keterangan = $_POST['keterangan'];
 
 $file_pdf = uploadPdf();
@@ -48,12 +40,7 @@ if (!$file_pdf) {
     return false;
 }
 
-$file_word = uploadWord();
-if (!$file_word) {
-    return false;
-}
-
-$query = "INSERT INTO tb_stk SET id_stk='', bagian='$bagian', jenis='$jenis', kategori='$kategori', no_dokumen='$no_dokumen', judul='$judul', revisi='$revisi', tmt_berlaku='$tmt_berlaku', kadaluarsa='$kadaluarsa', keterangan='$keterangan', file_pdf='$file_pdf', file_word='$file_word'";
+$query = "INSERT INTO tb_stk SET id_stk='', jenis='$jenis', kategori='$kategori', no_dokumen='$no_dokumen', judul='$judul',  keterangan='$keterangan', file_pdf='$file_pdf'";
 
 $hasil = mysqli_query($koneksi, $query);
 
@@ -120,53 +107,6 @@ function uploadPdf()
             Swal.fire(
                 'Gagal upload file PDF!',
                 'Jenis file harus PDF!',
-                'error'
-              ) 
-            },10); 
-            window.setTimeout(() => { 
-             window.location.replace('tambah.php');
-            } ,8000);
-        </script>";
-        return false;
-    }
-}
-
-function uploadWord()
-{
-    $ekstensi_diperbolehkan    = array('doc', 'docx');
-    $file_word = $_FILES['file_word']['name'];
-    $x = explode('.', $file_word);
-    $ekstensi = strtolower(end($x));
-    $ukuran = $_FILES['file_word']['size'];
-    $file_tmp = $_FILES['file_word']['tmp_name'];
-    $folder_word = "../../../assets/upload/stk/word/";
-    //validasi
-    if (in_array($ekstensi, $ekstensi_diperbolehkan) == true) {
-        if ($ukuran < 2097152) {
-            $file_word_baru = uniqid() . "_" . $file_word;
-            move_uploaded_file($file_tmp, $folder_word . $file_word_baru);
-            return $file_word_baru;
-        } else {
-            echo "<script>
-            setTimeout(() => { 
-                Swal.fire(
-                    'Ukuran file WORD terlalu besar!',
-                    'Silahkan kompres ukuran WORD! max. 2MB',
-                    'error'
-                  ) 
-                },10); 
-                window.setTimeout(() => { 
-                 window.location.replace('tambah.php');
-                } ,8000);
-            </script>";
-            return false;
-        }
-    } else {
-        echo "<script>
-        setTimeout(() => { 
-            Swal.fire(
-                'Gagal upload file WORD!',
-                'Jenis file harus DOC/DOCX!',
                 'error'
               ) 
             },10); 

@@ -152,7 +152,6 @@ include '../jumlah_data.php';
                                                     <th>Tanggal Diterima</th>
                                                     <th>Tanggal Surat</th>
                                                     <th>Keterangan</th>
-                                                    <th>Disposisi</th>
                                                     <th>Aksi</th>
                                                 </tr>
                                             </thead>
@@ -164,21 +163,11 @@ include '../jumlah_data.php';
                                                 ?>
                                                     <tr>
                                                         <td><?= $no; ?></td>
-                                                        <td><?= $data['bagian']; ?></td>
                                                         <td><?= $data['jenis']; ?></td>
-                                                        <td><?= $data['tmt_berlaku']; ?></td>
-                                                        <td <?php
-                                                            $tanggal_sekarang = date("Y-m-d");
-                                                            if ($tanggal_sekarang <= $data['kadaluarsa']) {
-                                                                echo "class='table-success'";
-                                                            } else {
-                                                                echo "class='table-danger'";
-                                                            }
-                                                            ?>>
-                                                            <?= $data['kadaluarsa']; ?>
-                                                        </td>
+                                                        <td><?= $data['kategori']; ?></td>
                                                         <td><?= $data['no_dokumen']; ?></td>
                                                         <td><?= $data['judul']; ?></td>
+                                                        <td><?= $data['keterangan']; ?></td>
                                                         <td>
                                                             <a href="detail.php?id_stk=<?= $data["id_stk"]; ?>" class="btn btn-primary p-1 mr-1 mb-1">
                                                                 <i class="la la-info-circle"></i>

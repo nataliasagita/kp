@@ -146,41 +146,28 @@ include '../../../koneksi.php';
                                         </div>
                                         <div class="form-group form-inline">
                                             <label for="jenis" class="col-md-2 col-form-label">Nomor Surat</label>
-                                            <div class="col-md-10 p-0">
-                                                <input class="form-control input-full" id="jenis" name="jenis" required>
+                                            <div class="col-md-9 p-0">
+                                                <input class="form-control" id="jenis" name="jenis" required>
                                             </div>
                                         </div>
                                         <div class="form-group form-inline">
                                             <label for="kategori" class="col-md-2 col-form-label">Asal Surat</label>
                                             <div class="col-md-10 p-0">
-                                                <input class="form-control input-full" id="kategori" name="kategori" required>
+                                                <input class="form-control" id="kategori" name="kategori" required>
                                             </div>
                                         </div>
                                         <div class="form-group form-inline">
                                             <label for="no_dokumen" class="col-md-2 col-form-label">Tanggal Diterima</label>
                                             <div class="col-md-10 p-0">
-                                                <input type="text" class="form-control datepicker" id="no_dokumen" name="no_dokumen" required>
+                                                <input type="text" class="form-control input-full datepicker" id="no_dokumen" name="no_dokumen" required>
                                             </div>
                                         </div>
                                         <div class="form-group form-inline">
                                             <label for="judul" class="col-md-2 col-form-label">Tanggal Surat</label>
                                             <div class="col-md-10 p-0">
-                                                <input type="text" class="form-control datepicker" id="judul" name="judul" required>
+                                                <input type="text" class="form-control input-full datepicker" id="judul" name="judul" required>
                                             </div>
                                         </div>
-                                        <div class="form-group form-inline"> <!-- -->
-                                            <label for="revisi" class="col-md-2 col-form-label">Revisi</label>
-                                            <div class="col-md-10 p-0">
-                                                <input type="number" class="form-control input-full" id="revisi" name="revisi" required>
-                                            </div>
-                                        </div>
-                                        <div class="form-group form-inline">
-                                            <label for="tmt_berlaku" class="col-md-2 col-form-label">TMT berlaku</label>
-                                            <div class="col-md-10 p-0">
-                                                <input type="text" class="form-control input-full datepicker" id="tmt_berlaku" name="tmt_berlaku" required>
-                                                <small id="" class="form-text text-muted">Tanggal kadaluarsa akan diinput otomatis dari TMT berlaku</small>
-                                            </div>
-                                        </div> <!-- -->
                                         <div class="form-group form-inline">
                                             <label for="keterangan" class="col-md-2 col-form-label">Keterangan</label>
                                             <div class="col-md-10 p-0">
@@ -193,17 +180,11 @@ include '../../../koneksi.php';
                                                 <input type="file" class="form-control-file" id="" name="file_pdf" required accept="application/pdf, .pdf">
                                             </div>
                                         </div>
-                                        <div class="form-group form-inline">
-                                            <label for="file_word" class="col-md-2 col-form-label">Upload file WORD (max. 2MB)</label>
-                                            <div class="col-md-5 p-0">
-                                                <input type="file" class="form-control-file" id="" name="file_word" required accept=".doc, .docx, application/msword, application/vnd.openxmlformats-officedocument.wordprocessingml.document">
-                                            </div>
-                                        </div>
-                                        <div class="form-group row float-right">
-                                            <div class="col-sm-5 mb-2 mr-2">
+                                        <div class="form-group row right">
+                                            <div class="col-sm-10 mb-2 mr-1">
                                                 <a href="data_anggota.php" class="btn btn-danger p-2 float-right">Batal</a>
                                             </div>
-                                            <div class="col-sm-5 ml-2 mr-1">
+                                            <div class="col-sm-1 ml-2 mr-1">
                                                 <button type="submit" name="submit" class="btn btn-primary p-2 float-right" value="simpan">Simpan data</button>
                                             </div>
                                         </div>
