@@ -146,26 +146,26 @@ include '../../../koneksi.php';
                                         </div>
                                         <div class="form-group form-inline">
                                             <label for="jenis" class="col-md-2 col-form-label">Nomor Surat</label>
-                                            <div class="col-md-9 p-0">
-                                                <input class="form-control" id="jenis" name="jenis" required>
+                                            <div class="col-md-10 p-0">
+                                                <input class="form-control input-full" id="jenis" name="jenis" required>
                                             </div>
                                         </div>
                                         <div class="form-group form-inline">
                                             <label for="kategori" class="col-md-2 col-form-label">Asal Surat</label>
                                             <div class="col-md-10 p-0">
-                                                <input class="form-control" id="kategori" name="kategori" required>
+                                                <input class="form-control input-full" id="kategori" name="kategori" required>
                                             </div>
                                         </div>
                                         <div class="form-group form-inline">
                                             <label for="no_dokumen" class="col-md-2 col-form-label">Tanggal Diterima</label>
                                             <div class="col-md-10 p-0">
-                                                <input type="text" class="form-control input-full datepicker" id="no_dokumen" name="no_dokumen" required>
+                                                <input type="text" class="form-control datepicker" id="no_dokumen" name="no_dokumen" required>
                                             </div>
                                         </div>
                                         <div class="form-group form-inline">
                                             <label for="judul" class="col-md-2 col-form-label">Tanggal Surat</label>
                                             <div class="col-md-10 p-0">
-                                                <input type="text" class="form-control input-full datepicker" id="judul" name="judul" required>
+                                                <input type="text" class="form-control datepicker" id="judul" name="judul" required>
                                             </div>
                                         </div>
                                         <div class="form-group form-inline">
