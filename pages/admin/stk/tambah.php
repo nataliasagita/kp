@@ -83,7 +83,6 @@ include '../../../koneksi.php';
                                     &nbsp; Logout
                                 </a>
                             </ul>
-                            <!-- /.dropdown-user -->
                         </li>
                     </ul>
                 </div>
@@ -132,9 +131,6 @@ include '../../../koneksi.php';
                         <div class="col-md-6 col-8 align-self-center">
                             <h4 class="page-title font-weight-bold">Form Disposisi</h4>
                         </div>
-                        <!-- <div class="col-md-6 col-4 align-self-center">
-                            <a href="tambah.php" class="btn btn-sm pull-right btn-primary"><i class="la la-plus font-weight-bold"></i> &nbsp;Tambah Dokumen</a>
-                        </div> -->
                     </div>
                     &nbsp;
                     <div class="row">
