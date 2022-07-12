@@ -147,9 +147,6 @@ while ($data = mysqli_fetch_array($hasil)) {
                         <div class="col-md-6 col-8 align-self-center">
                             <h4 class="page-title font-weight-bold">Edit Form Disposisi</h4>
                         </div>
-                        <!-- <div class="col-md-6 col-4 align-self-center">
-                            <a href="tambah.php" class="btn btn-sm pull-right btn-primary"><i class="la la-plus font-weight-bold"></i> &nbsp;Tambah Dokumen</a>
-                        </div> -->
                     </div>
                     &nbsp;
                     <div class="row">
@@ -159,70 +156,33 @@ while ($data = mysqli_fetch_array($hasil)) {
                                     <form action="proses_edit.php" method="POST" enctype="multipart/form-data">
                                         <input type="hidden" value="<?php echo $data['id_stk']; ?>" name="id_stk">
                                         <div class="form-group form-inline">
-                                            <label for="bagian" class="col-md-2 col-form-label">Bagian</label>
+                                            <label for="jenis" class="col-md-2 col-form-label">Nomor Surat</label>
                                             <div class="col-md-10 p-0">
-                                                <select class="form-control" id="bagian" name="bagian" required>
-                                                    <option value="<?= $bagian; ?>"><?= $bagian; ?></option>
-                                                    <?php
-                                                    $sql = mysqli_query($koneksi, "SELECT*FROM tb_bagian");
-                                                    while ($data = mysqli_fetch_array($sql)) {
-                                                    ?>
-                                                        <option value=" <?= $data['nama_bagian']; ?>"><?= $data['nama_bagian']; ?></option>
-                                                    <?php } ?>
-                                                </select>
+                                                <input class="form-control input-full" id="jenis" name="jenis" required>
                                             </div>
                                         </div>
                                         <div class="form-group form-inline">
-                                            <label for="jenis" class="col-md-2 col-form-label">Jenis</label>
-                                            <div class="col-md-9 p-0">
-                                                <select class="form-control" id="jenis" name="jenis" required>
-                                                    <option value="<?= $jenis; ?>"><?= $jenis; ?></option>
-                                                    <option value="Pedoman">Pedoman</option>
-                                                    <option value="TKO">TKO</option>
-                                                    <option value="TKI">TKI</option>
-                                                    <option value="TKPA">TKPA</option>
-                                                </select>
+                                            <label for="kategori" class="col-md-2 col-form-label">Asal Surat</label>
+                                            <div class="col-md-10 p-0">
+                                                <input class="form-control input-full" id="kategori" name="kategori" required>
                                             </div>
                                         </div>
                                         <div class="form-group form-inline">
-                                            <label for="kategori" class="col-md-2 col-form-label">Kategori</label>
+                                            <label for="no_dokumen" class="col-md-2 col-form-label">Tanggal Diterima</label>
                                             <div class="col-md-10 p-0">
-                                                <select class="form-control" id="kategori" name="kategori" required>
-                                                    <option value="<?= $kategori; ?>"><?= $kategori; ?></option>
-                                                    <option value="Normal">Normal</option>
-                                                    <option value="Critical">Critical</option>
-                                                </select>
+                                                <input type="text" class="form-control datepicker" id="no_dokumen" name="no_dokumen" required>
                                             </div>
                                         </div>
                                         <div class="form-group form-inline">
-                                            <label for="no_dokumen" class="col-md-2 col-form-label">No Dokumen</label>
+                                            <label for="judul" class="col-md-2 col-form-label">Tanggal Surat</label>
                                             <div class="col-md-10 p-0">
-                                                <input type="text" class="form-control input-full" id="no_dokumen" name="no_dokumen" required value="<?= $no_dokumen; ?>">
-                                            </div>
-                                        </div>
-                                        <div class="form-group form-inline">
-                                            <label for="judul" class="col-md-2 col-form-label">Judul</label>
-                                            <div class="col-md-10 p-0">
-                                                <input type="text" class="form-control input-full" id="judul" name="judul" required value="<?= $judul; ?>">
-                                            </div>
-                                        </div>
-                                        <div class="form-group form-inline">
-                                            <label for="revisi" class="col-md-2 col-form-label">Revisi</label>
-                                            <div class="col-md-10 p-0">
-                                                <input type="number" class="form-control input-full" id="revisi" name="revisi" required value="<?= $revisi; ?>">
-                                            </div>
-                                        </div>
-                                        <div class="form-group form-inline">
-                                            <label for="tmt_berlaku" class="col-md-2 col-form-label">TMT berlaku</label>
-                                            <div class="col-md-10 p-0">
-                                                <input type="text" class="form-control input-full datepicker" id="tmt_berlaku" name="tmt_berlaku" required value="<?= $tmt_berlaku; ?>">
-                                                <small id="" class="form-text text-muted">Tanggal kadaluarsa akan diinput otomatis dari TMT berlaku</small>
+                                                <input type="text" class="form-control datepicker" id="judul" name="judul" required>
                                             </div>
                                         </div>
                                         <div class="form-group form-inline">
                                             <label for="keterangan" class="col-md-2 col-form-label">Keterangan</label>
                                             <div class="col-md-10 p-0">
-                                                <textarea type="text" class="form-control input-full" id="keterangan" name="keterangan" rows="3" required><?= $keterangan; ?></textarea>
+                                                <textarea type="text" class="form-control input-full" id="keterangan" name="keterangan" rows="3"></textarea>
                                             </div>
                                         </div>
                                         <div class="form-group form-inline">
@@ -230,13 +190,6 @@ while ($data = mysqli_fetch_array($hasil)) {
                                             <div class="col-md-5 p-0">
                                                 <input type="file" class="form-control-file" id="" name="file_pdf" accept="application/pdf, .pdf">
                                                 <small id="" class="form-text text-muted">File sebelumnya: <b><?= $file_pdf; ?></b></small>
-                                            </div>
-                                        </div>
-                                        <div class="form-group form-inline">
-                                            <label for="file_word" class="col-md-2 col-form-label">Upload file WORD (max. 2MB)</label>
-                                            <div class="col-md-5 p-0">
-                                                <input type="file" class="form-control-file" id="" name="file_word" accept=".doc, .docx, application/msword, application/vnd.openxmlformats-officedocument.wordprocessingml.document">
-                                                <small id="" class="form-text text-muted">File sebelumnya: <b><?= $file_word; ?></b></small>
                                             </div>
                                         </div>
                                         <div class="form-group row float-right">

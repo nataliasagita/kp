@@ -84,7 +84,6 @@ include '../jumlah_data.php';
                                     &nbsp; Logout
                                 </a>
                             </ul>
-                            <!-- /.dropdown-user -->
                         </li>
                     </ul>
                 </div>
@@ -148,10 +147,8 @@ include '../jumlah_data.php';
                                                 <tr>
                                                     <th>No Urut</th>
                                                     <th>No Surat</th>
-                                                    <th>Asal Surat</th>
-                                                    <th>Tanggal Diterima</th>
-                                                    <th>Tanggal Surat</th>
-                                                    <th>Keterangan</th>
+                                                    <th>Catatan Sekjen</th>
+                                                    <th>Catatan Kadis</th>
                                                     <th>Aksi</th>
                                                 </tr>
                                             </thead>
@@ -163,11 +160,9 @@ include '../jumlah_data.php';
                                                 ?>
                                                     <tr>
                                                         <td><?= $no; ?></td>
+                                                        <td><?= $data['user']; ?></td>
                                                         <td><?= $data['no_surat']; ?></td>
                                                         <td><?= $data['tentang']; ?></td>
-                                                        <td><?= $data['user']; ?></td>
-                                                        <td><?= $data['tmt_berlaku']; ?></td>
-                                                        <td><?= $data['berakhir']; ?></td>
                                                         <td>
                                                             <a href="download_pdf.php?id_sk=<?= $data["id_sk"]; ?>" class="btn btn-success p-1 mr-1 mb-1" target="_blank">
                                                                 <i class="la la-download"></i>

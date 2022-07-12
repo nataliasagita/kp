@@ -82,7 +82,6 @@ include '../../../koneksi.php';
                                     &nbsp; Logout
                                 </a>
                             </ul>
-                            <!-- /.dropdown-user -->
                         </li>
                     </ul>
                 </div>
@@ -140,40 +139,28 @@ include '../../../koneksi.php';
                                     <form action="" method="POST">
                                         <input type="hidden" value="<?php echo $data['id_sp']; ?>" name="id_sp">
                                         <div class="form-group form-inline">
-                                            <label for="no_surat" class="col-md-2 col-form-label">No Surat</label>
+                                            <label for="user" class="col-md-2 col-form-label">Nomor Surat</label>
                                             <div class="col-md-10 p-0">
-                                                <input type="text" class="form-control input-full" id="no_surat" name="no_surat" required>
-                                            </div>
-                                        </div>
-                                        <div class="form-group form-inline">
-                                            <label for="tentang" class="col-md-2 col-form-label">Tentang</label>
-                                            <div class="col-md-10 p-0">
-                                                <textarea type="text" class="form-control input-full" id="tentang" name="tentang" rows="3" required></textarea>
-                                            </div>
-                                        </div>
-                                        <div class="form-group form-inline">
-                                            <label for="bagian" class="col-md-2 col-form-label">Bagian</label>
-                                            <div class="col-md-10 p-0">
-                                                <select class="form-control" id="bagian" name="bagian">
+                                                <select class="form-control input-full" id="user" name="user" required>
                                                     <?php
-                                                    $sql = mysqli_query($koneksi, "SELECT*FROM tb_bagian");
+                                                    $sql = mysqli_query($koneksi, "SELECT*FROM tb_stk");
                                                     while ($data = mysqli_fetch_array($sql)) {
                                                     ?>
-                                                        <option value="<?= $data['nama_bagian']; ?>"><?= $data['nama_bagian']; ?></option>
+                                                        <option value="<?= $data['jenis']; ?>"><?= $data['jenis']; ?></option>
                                                     <?php } ?>
                                                 </select>
                                             </div>
                                         </div>
                                         <div class="form-group form-inline">
-                                            <label for="tmt_berlaku" class="col-md-2 col-form-label">TMT berlaku</label>
+                                            <label for="no_surat" class="col-md-2 col-form-label">Catatan Sekjen</label>
                                             <div class="col-md-10 p-0">
-                                                <input type="text" class="form-control input-full" id="tmt_berlaku" name="tmt_berlaku" required>
+                                                <textarea type="text" class="form-control input-full" id="no_surat" name="no_surat" rows="3" required></textarea>
                                             </div>
                                         </div>
                                         <div class="form-group form-inline">
-                                            <label for="berakhir" class="col-md-2 col-form-label">Berakhir</label>
+                                            <label for="tentang" class="col-md-2 col-form-label">Catatan Kadis</label>
                                             <div class="col-md-10 p-0">
-                                                <input type="text" class="form-control input-full" id="berakhir" name="berakhir">
+                                                <textarea type="text" class="form-control input-full" id="tentang" name="tentang" rows="3" required></textarea>
                                             </div>
                                         </div>
                                         <div class="form-group form-inline">
@@ -187,7 +174,7 @@ include '../../../koneksi.php';
                                                 <a href="data_sk.php" class="btn btn-danger p-2 float-right">Batal</a>
                                             </div>
                                             <div class="col-sm-5 ml-2 mr-1">
-                                                <button type="submit" class="btn btn-primary p-2 float-right" value="simpan">Simpan data</button>
+                                                <button type="submit" name="submit" class="btn btn-primary p-2 float-right" value="simpan">Simpan data</button>
                                             </div>
                                         </div>
                                     </form>

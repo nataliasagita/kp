@@ -31,8 +31,6 @@ include '../../../koneksi.php';
 $no_surat = $_POST['no_surat'];
 $tentang = $_POST['tentang'];
 $user = $_POST['user'];
-$tmt_berlaku = $_POST['tmt_berlaku'];
-$berakhir = $_POST['berakhir'];
 
 $file_pdf = uploadPdf();
 if (!$file_pdf) {
@@ -40,7 +38,7 @@ if (!$file_pdf) {
 }
 
 
-$query = "INSERT INTO tb_sk SET id_sk='', no_surat='$no_surat', tentang='$tentang', user='$user', tmt_berlaku='$tmt_berlaku', berakhir='$berakhir', file_pdf='$file_pdf'";
+$query = "INSERT INTO tb_sk SET id_sk='', no_surat='$no_surat', tentang='$tentang', user='$user', file_pdf='$file_pdf'";
 
 $hasil = mysqli_query($koneksi, $query);
 
