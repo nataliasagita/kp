@@ -9,11 +9,8 @@ while ($data = mysqli_fetch_array($hasil)) {
     $kategori = $data['kategori'];
     $no_dokumen = $data['no_dokumen'];
     $judul = $data['judul'];
-    $revisi = $data['revisi'];
-    $tmt_berlaku = $data['tmt_berlaku'];
     $keterangan = $data['keterangan'];
     $file_pdf = $data['file_pdf'];
-    $file_word = $data['file_word'];
 }
 ?>
 
@@ -197,7 +194,7 @@ while ($data = mysqli_fetch_array($hasil)) {
                                                 <a href="data_stk.php" class="btn btn-danger p-2 float-right">Batal</a>
                                             </div>
                                             <div class="col-sm-5 ml-2 mr-1">
-                                                <button type="submit" name="submit" class="btn btn-primary p-2 float-right" value="simpan">Simpan data</button>
+                                                <button type="submit" name="submit" class="btn btn-primary p-2 float-right" value="update">Simpan data</button>
                                             </div>
                                         </div>
                                     </form>
