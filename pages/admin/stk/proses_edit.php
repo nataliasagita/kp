@@ -35,9 +35,10 @@ $kategori = $_POST['kategori'];
 $no_dokumen = $_POST['no_dokumen'];
 $judul = $_POST['judul'];
 $keterangan = $_POST['keterangan'];
-
-$hasil = mysqli_query($koneksi,"UPDATE tb_stk SET jenis='$jenis', kategori='$kategori', no_dokumen='$no_dokumen', judul='$judul',  keterangan='$keterangan' WHERE id_stk='$id_stk'");
-
+$file_pdf = uploadPdf();
+if (!$file_pdf) {
+    return false;
+}
 $query = "UPDATE tb_stk SET jenis='$jenis', kategori='$kategori', no_dokumen='$no_dokumen', judul='$judul',  keterangan='$keterangan', file_pdf='$file_pdf' WHERE id_stk='$id_stk'";
 $hasil= mysqli_query($koneksi, $query);
 
@@ -52,7 +53,7 @@ if ($hasil) {
         },10); 
         window.setTimeout(() => { 
          window.location.replace('data_stk.php');
-        } ,1000); 
+        } ,5000); 
     </script>";
 } else {
     "<script>
@@ -67,5 +68,50 @@ if ($hasil) {
          window.location.replace('edit.php');
         } ,5000);
     </script>";
+}
+
+function uploadPdf()
+{
+    $temp = $_FILES['file_pdf']['tmp_name'];
+    $file_pdf = $_FILES['file_pdf']['name'];
+    $size = $_FILES['file_pdf']['size'];
+    $type = $_FILES['file_pdf']['type'];
+    $folder_pdf = "../../../assets/upload/stk/pdf/";
+    // proses validasi
+    if ($type == 'application/pdf') {
+        if ($size < 2097152) {
+            $file_pdf_baru = uniqid() . "_" . $file_pdf;
+            move_uploaded_file($temp, $folder_pdf . $file_pdf_baru);
+            return $file_pdf_baru;
+        } else {
+            echo "<script>
+            setTimeout(() => { 
+                Swal.fire(
+                    'Ukuran file PDF terlalu besar!',
+                    'Silahkan kompres ukuran PDF! max. 2MB',
+                    'error'
+                  ) 
+                },10); 
+                window.setTimeout(() => { 
+                 window.location.replace('tambah.php');
+                } ,8000);
+            </script>";
+            return false;
+        }
+    } else {
+        echo "<script>
+        setTimeout(() => { 
+            Swal.fire(
+                'Gagal upload file PDF!',
+                'Jenis file harus PDF!',
+                'error'
+              ) 
+            },10); 
+            window.setTimeout(() => { 
+             window.location.replace('tambah.php');
+            } ,8000);
+        </script>";
+        return false;
+    }
 }
 ?>

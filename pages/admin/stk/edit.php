@@ -4,7 +4,6 @@ include '../../../koneksi.php';
 $id_stk = $_GET['id_stk'];
 $hasil = mysqli_query($koneksi, "SELECT*FROM tb_stk WHERE id_stk='$id_stk'");
 while ($data = mysqli_fetch_array($hasil)) {
-    $bagian = $data['bagian'];
     $jenis = $data['jenis'];
     $kategori = $data['kategori'];
     $no_dokumen = $data['no_dokumen'];
@@ -150,7 +149,7 @@ while ($data = mysqli_fetch_array($hasil)) {
                         <div class="col-md-12">
                             <div class="card">
                                 <div class="card-body">
-                                    <form action="proses_edit.php" method="POST" enctype="multipart/form-data">
+                                    <form action="proses_edit.php?nim=<?php echo $_GET['id_stk'];?>" method="POST" enctype="multipart/form-data">
                                         <input type="hidden" value="<?php echo $data['id_stk']; ?>" name="id_stk">
                                         <div class="form-group form-inline">
                                             <label for="jenis" class="col-md-2 col-form-label">Nomor Surat</label>
