@@ -40,6 +40,7 @@ $hasil = mysqli_query($koneksi,"UPDATE tb_stk SET jenis='$jenis', kategori='$kat
 
 $query = "UPDATE tb_stk SET jenis='$jenis', kategori='$kategori', no_dokumen='$no_dokumen', judul='$judul',  keterangan='$keterangan', file_pdf='$file_pdf' WHERE id_stk='$id_stk'";
 $hasil= mysqli_query($koneksi, $query);
+
 if ($hasil) {
     echo "<script>
     setTimeout(() => { 
