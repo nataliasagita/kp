@@ -38,12 +38,8 @@ $keterangan = $_POST['keterangan'];
 
 $hasil = mysqli_query($koneksi,"UPDATE tb_stk SET jenis='$jenis', kategori='$kategori', no_dokumen='$no_dokumen', judul='$judul',  keterangan='$keterangan' WHERE id_stk='$id_stk'");
 
-<<<<<<< HEAD
-=======
 $query = "UPDATE tb_stk SET jenis='$jenis', kategori='$kategori', no_dokumen='$no_dokumen', judul='$judul',  keterangan='$keterangan', file_pdf='$file_pdf' WHERE id_stk='$id_stk'";
 $hasil= mysqli_query($koneksi, $query);
-//$hasil = mysqli_query($koneksi, "update tb_stk set jenis='$jenis', kategori='$kategori', no_dokumen='$no_dokumen', judul='$judul',  keterangan='$keterangan', file_pdf='$file_pdf'  where id_stk='$id_stk'");
->>>>>>> 6eaa64048ac3261d50d45891a5084bfefb150a29
 if ($hasil) {
     echo "<script>
     setTimeout(() => { 
