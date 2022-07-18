@@ -134,6 +134,7 @@ include '../jumlah_data.php';
                             <h4 class="page-title font-weight-bold">Data Surat Masuk</h4>
                         </div>
                         <div class="col-md-6 col-4 align-self-center">
+                            <a href="export.php" class="btn btn-success pull-right ml-2 mr-0">Eksport Data</a>
                             <a href="tambah.php" class="btn btn-sm pull-right btn-primary"><i class="la la-plus font-weight-bold"></i> &nbsp;Tambah Dokumen</a>
                         </div>
                     </div>
