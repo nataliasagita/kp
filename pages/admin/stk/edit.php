@@ -154,31 +154,31 @@ while ($data = mysqli_fetch_array($hasil)) {
                                         <div class="form-group form-inline">
                                             <label for="jenis" class="col-md-2 col-form-label">Nomor Surat</label>
                                             <div class="col-md-10 p-0">
-                                                <input class="form-control input-full" id="jenis" name="jenis" required>
+                                                <input class="form-control input-full" id="jenis" name="jenis" value="<?php echo $jenis ?>" required>
                                             </div>
                                         </div>
                                         <div class="form-group form-inline">
                                             <label for="kategori" class="col-md-2 col-form-label">Asal Surat</label>
                                             <div class="col-md-10 p-0">
-                                                <input class="form-control input-full" id="kategori" name="kategori" required>
+                                                <input class="form-control input-full" id="kategori" name="kategori" value="<?php echo $kategori ?>" required>
                                             </div>
                                         </div>
                                         <div class="form-group form-inline">
                                             <label for="no_dokumen" class="col-md-2 col-form-label">Tanggal Diterima</label>
                                             <div class="col-md-10 p-0">
-                                                <input type="text" class="form-control datepicker" id="no_dokumen" name="no_dokumen" required>
+                                                <input type="text" class="form-control datepicker" id="no_dokumen" name="no_dokumen" value="<?php echo $no_dokumen ?>" required>
                                             </div>
                                         </div>
                                         <div class="form-group form-inline">
                                             <label for="judul" class="col-md-2 col-form-label">Tanggal Surat</label>
                                             <div class="col-md-10 p-0">
-                                                <input type="text" class="form-control datepicker" id="judul" name="judul" required>
+                                                <input type="text" class="form-control datepicker" id="judul" name="judul" value="<?php echo $judul ?>" required>
                                             </div>
                                         </div>
                                         <div class="form-group form-inline">
                                             <label for="keterangan" class="col-md-2 col-form-label">Keterangan</label>
                                             <div class="col-md-10 p-0">
-                                                <textarea type="text" class="form-control input-full" id="keterangan" name="keterangan" rows="3"></textarea>
+                                                <textarea type="text" class="form-control input-full" id="keterangan" name="keterangan" value="<?php echo $keterangan ?> "rows="3"></textarea>
                                             </div>
                                         </div>
                                         <div class="form-group form-inline">
