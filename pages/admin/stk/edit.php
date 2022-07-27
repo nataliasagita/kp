@@ -58,45 +58,30 @@ while ($data = mysqli_fetch_array($hasil)) {
                         </div>
                     </form>
                     <ul class="navbar-nav topbar-nav ml-md-auto align-items-center">
-                        <li class="nav-item dropdown">
-                            <a class="dropdown-toggle profile-pic" data-toggle="dropdown" href="#" aria-expanded="false">
-                                <img src="../../../assets/img/profile.jpg" alt="user-img" width="36" class="img-circle">
-                                <span class="text-white">Ahmad Sabili</span>
-                            </a>
-                            <ul class="dropdown-menu dropdown-user">
-                                <li>
-                                    <div class="user-box">
-                                        <div class="u-img">
-                                            <img src="../../../assets/img/profile.jpg" alt="user">
-                                        </div>
-                                        <div class="u-text">
-                                            <h4>Hizrian</h4>
-                                            <p class="text-muted">hello@themekita.com</p>
-                                            <a href="profile.html" class="btn btn-rounded btn-danger btn-sm">View Profile</a>
-                                        </div>
-                                    </div>
-                                </li>
-                                <div class="dropdown-divider"></div>
-                                <a class="dropdown-item" href="#">
-                                    <i class="la la-user"></i>
-                                    &nbsp; My Profile
-                                </a>
-                                <a class="dropdown-item" href="#"></i> My Balance</a>
-                                <a class="dropdown-item" href="#"><i class="ti-email"></i> Inbox</a>
-                                <div class="dropdown-divider"></div>
-                                <a class="dropdown-item" href="#">
-                                    <i class="la la-cog"></i>
-                                    &nbsp; Account Setting
-                                </a>
-                                <div class="dropdown-divider"></div>
-                                <a class="dropdown-item" href="#">
-                                    <i class="la la-power-off"></i>
-                                    &nbsp; Logout
-                                </a>
-                            </ul>
-                            <!-- /.dropdown-user -->
-                        </li>
-                    </ul>
+						<li class="nav-item dropdown">
+							<a class="dropdown-toggle profile-pic" data-toggle="dropdown" href="#" aria-expanded="false">
+								<img src="../../../assets/img/avatar.png" alt="user-img" width="36" class="img-circle">
+								<span class="text-white">Admin</span>
+							</a>
+							<ul class="dropdown-menu dropdown-user">
+								<li>
+									<div class="user-box">
+										<div class="u-img">
+											<img src="../../../assets/img/avatar.png" alt="user">
+										</div>
+										<div class="u-text">
+											<h4>Admin</h4>
+										</div>
+									</div>
+								</li>
+								<div class="dropdown-divider"></div>
+								<a class="dropdown-item" href="../../../login.php">
+									<i class="la la-power-off"></i>
+									&nbsp; Logout
+								</a>
+							</ul>
+						</li>
+					</ul>
                 </div>
             </nav>
         </div>
@@ -115,22 +100,10 @@ while ($data = mysqli_fetch_array($hasil)) {
 							<p>Forms</p>
 						</a>
 					</li>
-					<li class="nav-item">
-						<a href="../surat-keputusan/tambah.php">
-							<i class="la la-edit"></i>
-							<p>Tambah Catatan</p>
-						</a>
-					</li>
 					<li class="nav-item active bg-active">
 						<a href="data_stk.php">
 							<i class="la la-book"></i>
 							<p>Buku Surat Masuk</p>
-						</a>
-					</li>
-					<li class="nav-item">
-						<a href="../surat-keputusan/data_sk.php">
-							<i class="la la-file-o"></i>
-							<p>Lembar Disposisi</p>
 						</a>
 					</li>
                 </ul>
