@@ -75,7 +75,7 @@ while ($data = mysqli_fetch_array($hasil)) {
 									</div>
 								</li>
 								<div class="dropdown-divider"></div>
-								<a class="dropdown-item" href="../login.php">
+								<a class="dropdown-item" href="../../../login.php">
 									<i class="la la-power-off"></i>
 									&nbsp; Logout
 								</a>
