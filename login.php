@@ -47,11 +47,11 @@ if(isset($_POST['input'])){
             } ,2000); 
         </script>";
     }else{
-        "<script>
+        echo "<script>
         setTimeout(() => { 
             Swal.fire(
                 'Gagal!',
-                'Data gagal ditambahkan!',
+                'Username dan password tidak valid!',
                 'error'
             ) 
             },10); 
