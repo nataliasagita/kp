@@ -152,7 +152,7 @@ include '../../../koneksi.php';
                                         </div>
                                         <div class="form-group row right">
                                             <div class="col-sm-10 mb-2 mr-1">
-                                                <a href="data_anggota.php" class="btn btn-danger p-2 float-right">Batal</a>
+                                                <a href="data_stk.php" class="btn btn-danger p-2 float-right">Batal</a>
                                             </div>
                                             <div class="col-sm-1 ml-2 mr-1">
                                                 <button type="submit" name="submit" class="btn btn-primary p-2 float-right" value="simpan">Simpan data</button>
