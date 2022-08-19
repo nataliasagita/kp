@@ -172,7 +172,7 @@ include '../jumlah_data.php';
         <footer class="footer">
             <div class="container-fluid">
                 <div class="copyright ml-auto">
-                    2021, made with <i class="la la-heart heart text-danger"></i> by Ahmad Sabili
+                    
                 </div>
             </div>
         </footer>
