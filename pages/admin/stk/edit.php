@@ -180,7 +180,6 @@ while ($data = mysqli_fetch_array($hasil)) {
         <footer class="footer">
             <div class="container-fluid">
                 <div class="copyright ml-auto">
-                    Copyright © 2021. All rights reserved.
                 </div>
             </div>
         </footer>
