@@ -166,13 +166,7 @@ include '../../../koneksi.php';
                 </div>
             </div>
         </div>
-        <footer class="footer">
-            <div class="container-fluid">
-                <div class="copyright ml-auto">
-                    Copyright © 2021. All rights reserved.
-                </div>
-            </div>
-        </footer>
+        
     </div>
     </div>
 </body>
