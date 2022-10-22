@@ -49,7 +49,9 @@ var chart = new Chartist.Line('#trafficChart', {
 // salesChart
 var dataSales = {
 	labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
-	series: [5, 2, 3, 4, 1, 7, 6, 8, 9, 10, 12, 11],
+	series: [
+	[5, 4, 3, 7, 5, 10, 3, 4, 8, 10, 6, 8]
+	]
 }
 
 var optionChartSales = {
